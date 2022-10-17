@@ -1,0 +1,48 @@
+<app-home></app-home>
+<div class="container w-100 justify-content-center align-items-center">
+    <div class="header justify-content-center align-items-center">
+        <!--exercise selection identifiers-->
+        <!-- should be displaying muscles in the database
+        clickable -->
+        <!-- page navigation -->
+        <ul class="muscle-list w-100 justify-content-center align-items-center">
+            <li><a> Abs/Core</a></li>
+            <li><a>Back</a></li>
+            <li><a>Biceps</a></li>
+            <li><a>Butt</a></li>
+            <li><a>Chest</a></li>
+            <li><a>Legs</a></li>
+            <li><a>Shoulders</a></li>
+            <li><a>Triceps</a></li>
+        </ul>
+        
+    </div>
+    <div class="content row w-100">
+        <!-- exercises -->
+        <!-- with columns for object parameters (tutorial, muscles, etc) -->
+        <!--should be displaying all exercises at first-->
+        <table class="w-100 justify-content-center align-items-center"> 
+            <thead class="">
+                <th>Exercise</th>
+                <th>Muscles</th>
+                <th>Tutorial</th>
+            </thead>
+            <tbody >
+              <tr *ngFor="let exercise of exerciseList">
+                <td>
+                    <span><a (click)="showInfo(exercise)">{{exercise.id}}</a></span>
+                </td>
+                <td>
+                    <span>{{exercise.muscles}}</span>
+                </td>
+                <td>
+                    <span><a href={{exercise.tutorial}}>{{exercise.tutorial}}</a></span>
+                </td>
+              </tr>
+            </tbody>
+           
+        </table>  
+    </div>
+ </div>
+
+<app-exercise-info [exercise]="exercise"></app-exercise-info>
