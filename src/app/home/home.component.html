@@ -3,8 +3,15 @@
         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
         <div class="logout" (click)="signOutWithCognito()">Logout</div>
     </a>
-</div>
+</div> 
 
-<div class="user-content">
-    <h2>Content that needs authentication goes here </h2>
-</div>
+<div class="user-content align-items-center row">
+        <h2> 
+            <a href="/emenu" *ngIf="router.url != '/emenu'">Workout Menu</a>  
+        </h2> 
+        <h2>
+            <a href="/">Home</a>
+        </h2>
+
+</div> 
+

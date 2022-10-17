@@ -1,0 +1,58 @@
+.container {
+    border: 2px solid black;
+    height: 700px;
+}
+
+.header {
+    height: 100px;
+}
+
+.muscle-list {
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+.muscle-list li {
+    list-style: none;
+    display: inline-flex;
+    padding-left: 15px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    border: 1px solid black;
+    height: 400px;
+    top: 0px;
+    overflow: scroll;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    margin: auto;
+    position: sticky;
+    background-color: whitesmoke;
+    top: 0;
+    height: 75px;
+    font-weight: bolder;
+    font-size: 25px;
+    box-shadow: 0 2px gray;
+}
+
+tbody {
+    background-color: beige;
+}
+
+td {
+    text-align: center;
+    padding-bottom: 20px;
+}

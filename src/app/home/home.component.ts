@@ -9,7 +9,7 @@ import { CognitoService } from '../services/cognito.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router, private cognitoService: CognitoService) { }
+  constructor(public router: Router, private cognitoService: CognitoService) { }
 
   ngOnInit(): void { 
     this.getUserDetails();
