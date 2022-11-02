@@ -13,6 +13,7 @@ export class RegisterComponent implements OnInit {
   isConfirm: boolean = false;
   alertMessage: string = '';
   showAlert: boolean = false;
+  //add to the methods for a user creation in a dynamodb
 
 
   constructor(private router: Router, private cognitoService: CognitoService) { }

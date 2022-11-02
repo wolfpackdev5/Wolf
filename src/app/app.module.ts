@@ -11,6 +11,7 @@ import { MessageModalComponent } from './aws/message-modal/message-modal.compone
 import { ExerciseMenuComponent } from './exercise-menu/exercise-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExerciseInfoComponent } from './exercise-info/exercise-info.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,8 @@ import { ExerciseInfoComponent } from './exercise-info/exercise-info.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    NgxPaginationModule,
-    
+    HttpClientModule,  
+    YouTubePlayerModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,18 @@
-<p>exercise-info works!</p>
+<app-home></app-home>
+<div class="container">
+    <div class="row w-100 justify-content-center video">
+        <div class="auth-box">
+            
+            <div>
+                <div class="header">
+                    <h2 style="text-align: center;">{{eid}}</h2>
+                </div>
+                <div class="form">
+                    <!--look at documentation on youtube player to embed video in html-->
+                    <youtube-player videoId={{videoId}}></youtube-player>
+                </div>
+                <h4><strong style="font-weight: bolder; font-size: larger;">Muscles trained in this exercise:</strong> {{muscles}}</h4>
+            </div>
+        </div>
+    </div>
+</div>

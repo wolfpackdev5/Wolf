@@ -14,4 +14,9 @@ export class ExerciseService {
   public getAllExercises(): Observable<any> {
     return this.http.get(`${this.awsUrl}/exercises`);
   }
+
+  public getExerciseByMuscle(muscle: string): Observable<any> {
+    console.log(muscle);
+    return this.http.get(`${this.awsUrl}/${muscle}`);
+  }
 }

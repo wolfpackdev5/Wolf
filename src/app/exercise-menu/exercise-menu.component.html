@@ -5,16 +5,11 @@
         <!-- should be displaying muscles in the database
         clickable -->
         <!-- page navigation -->
-        <ul class="muscle-list w-100 justify-content-center align-items-center">
-            <li><a> Abs/Core</a></li>
-            <li><a>Back</a></li>
-            <li><a>Biceps</a></li>
-            <li><a>Butt</a></li>
-            <li><a>Chest</a></li>
-            <li><a>Legs</a></li>
-            <li><a>Shoulders</a></li>
-            <li><a>Triceps</a></li>
-        </ul>
+        <div class="muscle-list w-100 justify-content-center align-items-center" >
+            <ul>
+                <li *ngFor="let muscle of muscleList" (click)="specificExercises(muscle)"><a>{{muscle}}</a></li>
+            </ul>
+        </div>
         
     </div>
     <div class="content row w-100">
@@ -36,7 +31,7 @@
                     <span>{{exercise.muscles}}</span>
                 </td>
                 <td>
-                    <span><a href={{exercise.tutorial}}>{{exercise.tutorial}}</a></span>
+                    <span>{{exercise.tutorial}}</span>
                 </td>
               </tr>
             </tbody>
@@ -45,4 +40,3 @@
     </div>
  </div>
 
-<app-exercise-info [exercise]="exercise"></app-exercise-info>
