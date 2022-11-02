@@ -5,11 +5,12 @@
 
 .header {
     height: 100px;
+    overflow: scroll;
 }
 
 .muscle-list {
     margin: auto;
-    display: flex;
+    display: inline-flex;
     margin-top: 50px;
 }
 

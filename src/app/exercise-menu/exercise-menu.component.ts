@@ -3,10 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Exercise } from '../models/exercise';
 import { Muscles } from '../models/muscles';
 import { ExerciseService } from '../services/exercise-service.service';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
 import { ExerciseInfoComponent } from '../exercise-info/exercise-info.component';
+import { DataTransferService } from '../services/data-transfer.service';
 
 @Component({
   selector: 'app-exercise-menu',
@@ -17,10 +16,11 @@ export class ExerciseMenuComponent implements OnInit {
   muscle!: Muscles;
   exercise!: Exercise;
   exerciseList!: Exercise[]; 
-  component =  ExerciseInfoComponent;
-
+  muscleList: string[] = [
+    "core", "back", "biceps", "butt", "chest", "legs", "shoulders", "triceps"
+  ]
   constructor(private exerciseServ: ExerciseService, private router: Router,
-  private dialog: MatDialog) { }
+    private dataTransfer: DataTransferService) { }
 
   ngOnInit(): void {
     this.getExercises();
@@ -40,7 +40,16 @@ export class ExerciseMenuComponent implements OnInit {
   public showInfo(exercise: Exercise): void {
     this.exercise = exercise;
     console.log(this.exercise.id);
+    this.dataTransfer.saveExercise(this.exercise);
     this.router.navigate(['/info']);
+  }
+
+  public specificExercises(muscle: string) {
+    console.log(muscle);
+    this.exerciseServ.getExerciseByMuscle(muscle).subscribe(
+      (res) => {
+        this.exerciseList = res;
+      })
   }
 
 }
