@@ -12,6 +12,7 @@ import { ExerciseMenuComponent } from './exercise-menu/exercise-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExerciseInfoComponent } from './exercise-info/exercise-info.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { WorkoutComponent } from './workout/workout.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MessageModalComponent,
     ExerciseMenuComponent,
     ExerciseInfoComponent,
+    WorkoutComponent,
   ],
   imports: [
     BrowserModule,
