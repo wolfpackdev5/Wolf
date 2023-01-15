@@ -36,7 +36,23 @@
               </tr>
             </tbody>
            
-        </table>  
+        </table> 
     </div>
+    <!-- "core", "back", "biceps", "butt", "chest", "legs", "shoulders", "triceps" -->
+    <p *ngIf="selectedMuscle == 'core'">The muscles located in the stomach area right below the chest. Also includes the 
+        lower back muscles and pelvic floor. Used to stabilize and flex/fold the body.</p> 
+    <p *ngIf="selectedMuscle == 'back'">The muscles located on the back of the torso. Main muscle group responsible for pulling</p> 
+    <p *ngIf="selectedMuscle == 'biceps'">Muscles located on the front of the arm. Used to flex and rotate the arm in coordination 
+        with the forearm muscles.</p> 
+    <p *ngIf="selectedMuscle == 'butt'">Muscles used to extend the hips - think standing up from a seated position and your comes 
+        back to being directly under your torso.</p> 
+    <p *ngIf="selectedMuscle == 'chest'">The muscles on your chest. The main muscle group responsible for pushing</p> 
+    <p *ngIf="selectedMuscle == 'legs'">Made up of two main muscle groups - the quadriceps and the hamstrings. The quadriceps primary 
+        focus is to straighten the leg while the hamstrings primary focus is to bend the leg.</p> 
+    <p *ngIf="selectedMuscle == 'shoulders'">Your shoulder muscles are located at the top of your arm at the connection
+        to the torso. Used for raising the arms and lifting things overhead</p> 
+    <p *ngIf="selectedMuscle == 'triceps'">Your triceps brachii, more commonly known as your triceps, 
+        is a group of three muscles that are located at the back of your upper arm. These muscles run between your 
+        shoulder and elbow. They help to straighten your arm and stabilize your shoulder.</p> 
  </div>
 

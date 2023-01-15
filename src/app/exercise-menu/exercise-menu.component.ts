@@ -16,6 +16,7 @@ export class ExerciseMenuComponent implements OnInit {
   muscle!: Muscles;
   exercise!: Exercise;
   exerciseList!: Exercise[]; 
+  selectedMuscle!: string;
   muscleList: string[] = [
     "core", "back", "biceps", "butt", "chest", "legs", "shoulders", "triceps"
   ]
@@ -46,6 +47,7 @@ export class ExerciseMenuComponent implements OnInit {
 
   public specificExercises(muscle: string) {
     console.log(muscle);
+    this.selectedMuscle = muscle;
     this.exerciseServ.getExerciseByMuscle(muscle).subscribe(
       (res) => {
         this.exerciseList = res;
