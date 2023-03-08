@@ -1,9 +1,6 @@
-<div class="navigation">
-    <a class="button">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-        <div class="logout" (click)="signOutWithCognito()">Logout</div>
-    </a>
-</div> 
+<!-- <div class="navigation">
+   
+</div>  -->
 
 <div class="user-content align-items-center row">
         <h2> 
@@ -15,12 +12,21 @@
         <h2>
             <a href="">Build A Workout</a>
         </h2>
+        <a class="button dropdown">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+            <!-- <div class="logout " (click)="signOutWithCognito()">Logout</div> -->
+            <div class="dropdown-content">
+                <a class="logout " (click)="signOutWithCognito()">Logout</a>
+                <a (click)="openDialog()">Profile</a>
+            </div>
+        </a>
+        
 </div> 
 
 <div class="banner">
     <h2 *ngIf="router.url == '/'">Welcome to WolfPack Fitness</h2>
 </div>
-<div class="post">
+<div class="post" *ngIf="router.url == '/home'">
     <h3>Add A Post</h3>
 </div>
 

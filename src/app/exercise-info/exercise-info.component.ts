@@ -21,7 +21,7 @@ export class ExerciseInfoComponent implements OnInit {
   ngOnInit(): void {
     if(this.dataTransfer.getExercise() != null || this.dataTransfer.getExercise() != undefined) {
       this.exercise = this.dataTransfer.getExercise();
-      localStorage.setItem("exercise", this.exercise.id);
+      localStorage.setItem("exercise", this.exercise.name);
       localStorage.setItem("muscles", this.dataTransfer.convertToString(this.exercise.muscles));
       localStorage.setItem("tutorial", this.exercise.tutorial);
     }

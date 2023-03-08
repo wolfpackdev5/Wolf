@@ -40,7 +40,7 @@ export class ExerciseMenuComponent implements OnInit {
 
   public showInfo(exercise: Exercise): void {
     this.exercise = exercise;
-    console.log(this.exercise.id);
+    console.log(this.exercise.name);
     this.dataTransfer.saveExercise(this.exercise);
     this.router.navigate(['/info']);
   }
