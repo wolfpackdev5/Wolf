@@ -13,7 +13,6 @@ import { ProfileComponent } from './profile-dialog/profile/profile.component';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  client = this.getUserDetails();
 
   constructor(public router: Router, private cognitoService: CognitoService, private exerciseService: ExerciseService,
     public dialog: MatDialog) { }
@@ -22,7 +21,7 @@ export class HomeComponent implements OnInit {
     this.getUserDetails();
   }
 
-  getUserDetails() {
+  private getUserDetails() {
     this.cognitoService.getUser()
     .then((user: any) => {
       if(user) {
@@ -55,13 +54,12 @@ export class HomeComponent implements OnInit {
   openDialog(): void {
     console.log("called");
     const dialogRef = this.dialog.open(ProfileComponent, {
-      width: '250px',
-      data: {client: this.client}
+      width: '250px'
     });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(result);
-    // })
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+    });
   }
 
 }

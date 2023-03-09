@@ -14,6 +14,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { WorkoutComponent } from './workout/workout.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProfileComponent } from './home/profile-dialog/profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ProfileComponent } from './home/profile-dialog/profile/profile.componen
     FormsModule,
     HttpClientModule,  
     YouTubePlayerModule,
-    MatDialogModule,  
+    MatDialogModule, 
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

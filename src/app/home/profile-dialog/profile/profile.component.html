@@ -1,1 +1,11 @@
-<h1 mat-dialog-title>PROFILE WORKS</h1>
+<div class="mat-dialog">
+    <h1 mat-dialog-title>PROFILE WORKS</h1>
+    <div mat-dialog-content>
+        <p>{{client.attributes.given_name}}</p>
+        <p>{{client.attributes.family_name}}</p>
+        <p>{{client.attributes.email}}</p>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="closeDialog()"></button>
+    </div>
+</div>
