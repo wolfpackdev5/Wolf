@@ -8,8 +8,8 @@ import { Exercise } from '../models/exercise';
 })
 export class ExerciseService {
   awsUrl = "https://lq65y56sxe.execute-api.us-east-1.amazonaws.com/dev/wolfpack";
-  backend = "http://localhost:8080";
-  feign = "http://localhost:6000";
+  //backend = "http://localhost:8080";
+  feign = "http://localhost:6500";
 
   constructor(private http: HttpClient) { }
 

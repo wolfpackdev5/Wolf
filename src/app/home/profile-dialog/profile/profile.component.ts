@@ -12,6 +12,17 @@ export class ProfileComponent implements OnInit {
   client!: any;
 
   constructor(public dialogRef : MatDialogRef<ProfileComponent>, private cognitoService: CognitoService) { }
+  //all the check boxes in the html file need to be ng model booleans 
+  first!: string;
+  last!: string;
+  email!: string;
+  abs: boolean = false;
+  back: boolean = false;
+  butt: boolean = false;
+  biceps: boolean = false;
+  chest: boolean = false;
+  legs: boolean = false;
+  triceps: boolean = false;
 
   ngOnInit(): void {
     this.userDetails();

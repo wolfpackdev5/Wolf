@@ -1,7 +1,6 @@
 <!-- <div class="navigation">
    
 </div>  -->
-
 <div class="user-content align-items-center row">
         <h2> 
             <a href="/emenu" *ngIf="router.url != '/emenu'">Workout Menu</a>  
@@ -10,14 +9,14 @@
             <a href="/">Home</a>
         </h2>
         <h2>
-            <a href="">Build A Workout</a>
+            <a (click)="buildWorkout(user.email)">Build A Workout</a>
         </h2>
         <a class="button dropdown">
             <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
             <!-- <div class="logout " (click)="signOutWithCognito()">Logout</div> -->
             <div class="dropdown-content">
                 <a class="logout " (click)="signOutWithCognito()">Logout</a>
-                <a (click)="openDialog()">Profile</a>
+                <a (click)="openProfileDialog()">Profile</a>
             </div>
         </a>
         

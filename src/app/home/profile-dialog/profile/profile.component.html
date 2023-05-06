@@ -1,11 +1,32 @@
 <div class="mat-dialog">
-    <h1 mat-dialog-title>PROFILE WORKS</h1>
+    <h1 mat-dialog-title>{{client.attributes.given_name}} {{client.attributes.family_name}} </h1>
+    <h3>What would you like to change?</h3>
     <div mat-dialog-content>
-        <p>{{client.attributes.given_name}}</p>
-        <p>{{client.attributes.family_name}}</p>
-        <p>{{client.attributes.email}}</p>
+        <mat-form-field>
+            <label for="first">FirstName: </label>
+            <input [(ngModel)]="first" matInput id="first" name="first" type="text" placeholder="{{client.attributes.given_name}}"> 
+        </mat-form-field>
+        <mat-form-field>
+            <label for="last">LastName: </label>
+            <input [(ngModel)]="last" matInput id="last" name="last" type="text" placeholder="{{client.attributes.family_name}}"> 
+        </mat-form-field>
+        <mat-form-field>
+            <label for="email">Email: </label>
+            <input [(ngModel)]="email" matInput id="email" name="email" type="text" placeholder="{{client.attributes.email}}"> 
+        </mat-form-field>
+       
+           <mat-checkbox [(ngModel)]="abs">Abs</mat-checkbox>
+           <mat-checkbox  [(ngModel)]="back">Back</mat-checkbox>
+           <mat-checkbox [(ngModel)]="butt">Butt</mat-checkbox>
+           <mat-checkbox [(ngModel)]="biceps">Biceps</mat-checkbox>
+           <mat-checkbox [(ngModel)]="chest">Chest</mat-checkbox>
+           <mat-checkbox [(ngModel)]="legs">Legs</mat-checkbox>
+           <mat-checkbox [(ngModel)]="triceps">Triceps</mat-checkbox>
+       
+       
     </div>
     <div mat-dialog-actions>
-        <button mat-button (click)="closeDialog()"></button>
+        <button mat-button (click)="closeDialog()">Cancel</button>
+         <button mat-button>Done</button>
     </div>
 </div>

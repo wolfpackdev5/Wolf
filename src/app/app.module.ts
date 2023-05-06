@@ -15,6 +15,8 @@ import { WorkoutComponent } from './workout/workout.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProfileComponent } from './home/profile-dialog/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,  
     YouTubePlayerModule,
     MatDialogModule, 
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    MatInputModule, 
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
