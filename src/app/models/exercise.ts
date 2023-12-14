@@ -1,10 +1,10 @@
 export class Exercise {
-    id!: string;
+    name!: string;
     muscles!: string[];
     tutorial!: string;
     
     public Exercise() {
-        this.id = '';
+        this.name = '';
         this.muscles = [];
         this.tutorial = '';
     }

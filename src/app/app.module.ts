@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from "@angular/forms"
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './aws/login/login.component';
@@ -13,6 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ExerciseInfoComponent } from './exercise-info/exercise-info.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { WorkoutComponent } from './workout/workout.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ProfileComponent } from './home/profile-dialog/profile/profile.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -24,13 +28,18 @@ import { WorkoutComponent } from './workout/workout.component';
     ExerciseMenuComponent,
     ExerciseInfoComponent,
     WorkoutComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,  
-    YouTubePlayerModule,  
+    YouTubePlayerModule,
+    MatDialogModule, 
+    BrowserAnimationsModule,
+    MatInputModule, 
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
